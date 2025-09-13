@@ -20,7 +20,10 @@ namespace EntityLayer
         public Brand Brand { get; set; }
 
         // Image Bağlantısı
-        public ICollection<CarImage> Images { get; set; }
+        public ICollection<CarImage> Images { get; set; } =new List<CarImage>();
+
+        // Campaign Ayarı
+        public decimal DisplayPrice => IsCampaignAvailable && CampaignPrice.HasValue ? CampaignPrice.Value :CarPrice;
 
     }
 }

@@ -8,7 +8,7 @@ namespace EntityLayer
 {
     public class CarImage
     {
-        public int ImageId { get; set; }
+        public int CarImageId { get; set; }
         public string ImageUrl { get; set; }
 
         // Car Bağlantısı
